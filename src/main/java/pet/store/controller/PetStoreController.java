@@ -15,7 +15,7 @@ import pet.store.controller.model.PetStoreData;
 import pet.store.service.PetStoreService;
 
 @RestController
-@RequestMapping("/pet_store")
+@RequestMapping("")
 @Slf4j
 public class PetStoreController {
 
@@ -34,7 +34,7 @@ public class PetStoreController {
 	public PetStoreData updatePetStore(@PathVariable Long petStoreId,
 			@RequestBody PetStoreData petStoreData ) {
 		log.info("Updating pet store {}", petStoreData);
-		
+		petStoreData.setPetStoreId(petStoreId);
 		return petStoreService.savePetStore(petStoreData);
 	}
 }
