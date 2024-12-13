@@ -3,7 +3,6 @@ package pet.store.controller.model;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import pet.store.entity.Employee;
-import pet.store.entity.PetStore;
 
 @Data
 @NoArgsConstructor
@@ -15,7 +14,8 @@ public class PetStoreEmployee {
 	private String employeePhone;
 	private String employeeJobTitle;
 	
-	PetStoreEmployee(Employee employee) {
+	
+	public PetStoreEmployee(Employee employee) {
 		employeeId = employee.getEmployeeId();
 		employeeFirstName = employee.getEmployeeFirstName();
 		employeeLastName = employee.getEmployeeLastName();

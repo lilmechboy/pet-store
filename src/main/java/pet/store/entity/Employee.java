@@ -10,11 +10,12 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity
 @Data
-
+@NoArgsConstructor
 public class Employee {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,8 +35,8 @@ public class Employee {
 	
 
 	
-	public Employee() {
-		// TODO Auto-generated constructor stub
-	}
+//	public Employee() {
+//		// TODO Auto-generated constructor stub
+//	}
 
 }
